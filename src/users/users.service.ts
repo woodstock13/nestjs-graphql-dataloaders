@@ -10,17 +10,16 @@ export class UsersService {
     { id: 2, name: 'Jane' },
     { id: 3, name: 'Alex' },
     { id: 4, name: 'Anna' },
+    { id: 5, name: 'toto' },
   ];
 
   async getUsers() {
     console.log('Getting users...');
-    await delay(3000);
     return this.users;
   }
 
   async getUser(id: number) {
     console.log(`Getting user with id ${id}...`);
-    await delay(1000);
     return this.users.find((user) => user.id === id);
   }
 
